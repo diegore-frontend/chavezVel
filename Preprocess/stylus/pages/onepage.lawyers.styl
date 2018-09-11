@@ -1,0 +1,80 @@
+.ap
+	&-op
+		&-sect
+			&--lawyers
+				background-color: $lightGr
+				position: relative
+
+	&-law
+		&-hd
+			padding: 2em 0
+
+			.ap-tt-sect
+				&:before
+					background-color: $orange
+
+		&-img
+			display: inline-block
+			vertical-align: top
+			width: 10em
+			position: relative
+
+
+			&:before
+				background: url('../img/pattern.png')
+				content: ''
+				position: absolute
+				width: 100%
+				height: 10.1em
+
+			&-info
+				display block
+				padding-top: .6em
+
+				span
+					display block
+
+				.ap-law
+					&-name
+						color: $orange
+						font-weight: 700;
+						font-size: 1.8em;
+						line-height: 1em;
+
+					&-charge
+						font-family: $subFont
+						font-style: italic
+
+			img
+				width: 100%
+				border-bottom: 2px solid $orange
+
+		&-info
+			display: inline-block;
+			vertical-align: top;
+			width: calc(100% - 11em);
+			border-left: 1px solid rgba(0,0,0,.2);
+			margin-left: 0.6em;
+			padding-left: 0.6em;
+
+			.ap-tt-sect
+				font-size: 1.4em
+				margin-bottom: .6em
+				text-transform uppercase
+
+		&-item
+			font-family: $subFont
+			color: $base
+
+			&:before
+				content: '- '
+
+	&-lawyer
+		+below(420px)
+			float: none
+			width: 100%
+			margin: 0 0 1em
+
+		&-area
+			padding: 1em 1em 2em
+			background-color: #FFF

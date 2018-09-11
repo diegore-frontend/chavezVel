@@ -1,0 +1,41 @@
+.ap
+	// Loading
+	&-load
+
+		&-area
+			color: #FFF
+			max-width: 14em
+			margin: auto
+			text-align: center
+
+			.ap-txt
+				margin-top: 0.4em;
+				font-size: 1.2em;
+				color: #FFF
+
+				span
+					animation: 1.4s blink both infinite
+					font-family: $prinFont
+
+					&:nth-child(2)
+						animation-delay: .3s
+
+					&:nth-child(3)
+						animation-delay: .5s
+
+		&-img
+			position: relative
+			padding-bottom: .8em
+
+			img
+				animation: 1.6s fadeIn 1s both
+				width: 100%
+				opacity: 0
+
+		&-grow
+			animation: 1s fadeIn both, 1s growLine .6s both
+			background-color: $orange
+			display: block;
+			width: 0;
+			height: 0.26em;
+			margin: .6em auto 0;

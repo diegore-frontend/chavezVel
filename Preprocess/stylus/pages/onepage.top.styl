@@ -1,0 +1,149 @@
+.ap
+	&-op
+		&-sect
+			&--top
+				position: relative
+				height: 100%
+
+				&:before
+					background: linear-gradient(top, rgba(#3b3b39, .75), rgba(#3b3b39, 0));
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 8em;
+					top: 0;
+					z-index: 12;
+					pointer-events: none;
+
+	&-top
+		&-slider
+			background-color: #3b3b39
+			height: calc(100% - 10em)
+			overflow hidden
+			position: relative
+
+			&-pattern
+				background: url('../img/pattern.png')
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				z-index: 1
+
+			.swiper-slide
+				background-size: cover
+
+				&-active
+					+below(760px)
+						animation: 10s moveBg-mov 1.4s both cubic-bezier(.25,.1,.25,1)
+
+					+above(760px)
+						animation: 30s moveBg 1.4s both cubic-bezier(.25,.1,.25,1)
+					.ap-tt-sect--orange
+						animation: 1s fadeInUpSlw .3s both
+
+	&-slide
+		&--first
+			background: url('../img/slide-top/slide-01.jpg') no-repeat center top
+
+		&--middle
+			background: url('../img/slide-top/slide-02.jpg') no-repeat center top
+
+		&--last
+			background: url('../img/slide-top/slide-03.jpg') no-repeat center top
+
+		&-info
+			position: absolute;
+			bottom: 50%;
+			width: 100%;
+			margin-bottom: -9em;
+			text-align: center;
+			z-index: 2
+
+			.ap-tt-sect--orange
+				color: $orange
+				font-size: 1.8em;
+				text-transform: uppercase;
+				position: relative;
+
+		&-tt-wrap, &-txt-wrap
+			overflow: hidden
+			height: 2em
+
+		&-txt-wrapp
+			span
+				color: #FFF
+				font-family: $subFont
+				display block
+				font-size: 1.5em
+
+	&-fixed
+		&-logo
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			margin-top: -4em;
+			z-index: 4
+
+	&-fx
+		&-lg
+			width: 16em
+			margin: auto
+
+			img
+				width: 100%
+
+	// Feed
+	&-nfd
+		background-color: $concretedk
+
+		&-header
+			padding: 1em 1em 0
+
+		.ap-tt-sect--small-bold
+			font-size: 1.5em
+
+	&-news
+		&-item
+			padding: 0 1em
+
+		&-info
+			float: left;
+			width: calc(100% - 3em);
+			border-right: 1px solid rgba(255,255,255,.1);
+			padding-right: .6em;
+
+			.ap-txt
+				display: block
+				height: 4em
+
+			.ap-tt-sect
+				color: #FFF;
+				font-size: 1.4em;
+				text-align: left;
+
+		&-nav
+			float: left;
+			width: 3em;
+			padding-top: 3em;
+
+		&-link
+			color: $orange
+			text-align: right;
+			display: block;
+			font-size: 2em;
+
+@keyframes moveBg
+	0%
+		background-position: center top
+
+	100%
+		background-position: 10em 0
+
+@keyframes moveBg-mov
+	0%
+		background-position: center top
+
+	100%
+		background-position: 40% 0

@@ -1,0 +1,63 @@
+// Premios Cinépolis 2018
+// Gulpfile included :: Gulp render console: Gulp
+
+@import 'nib'
+@import 'components/cmps.colors'
+
+$prinFont = 'Teko', sans-serif
+$subFont = 'Muli', sans-serif
+
+html, body
+	height: 100%
+
+body
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background-color: $concretedk
+	font-family: $prinFont
+	font-size: 12px
+	font-weight: normal
+	overflow-x: hidden
+	position: relative
+
+	+above(1026px)
+		font-size: 13px
+
+	@media screen and (max-height: 720px) and (min-width: 1280px) and (max-width: 1440px)
+		font-size 11px
+
+	+above(1560px)
+		font-size: 14px
+
+// Tools
+@import 'components/cmps.normalizr'
+@import 'components/cmps.grid'
+
+// Components
+@import 'components/cmps.fonts'
+@import 'components/cmps.text-formating'
+@import 'components/cmps.buttons'
+@import 'components/cmps.scrollbar'
+@import 'components/cmps.animation'
+@import 'components/cmps.form'
+@import 'components/cmps.uniform'
+
+// Vendors
+@import 'vendors/vnd.swiper'
+
+// Layout
+@import 'layout/lay.layout'
+@import 'layout/lay.modal'
+@import 'layout/lay.loader'
+@import 'layout/lay.devices'
+@import 'layout/lay.header'
+@import 'layout/lay.footer'
+
+// Pages
+@import 'pages/page.elements'
+
+// Onepage
+@import 'pages/onepage.top'
+@import 'pages/onepage.areas'
+@import 'pages/onepage.who'
+@import 'pages/onepage.lawyers'

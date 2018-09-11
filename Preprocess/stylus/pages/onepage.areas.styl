@@ -1,0 +1,120 @@
+.ap
+	&-op
+		&-sect
+			&--areas
+				background: #FFF;
+				padding: 5em 0 0
+
+
+	&-area
+		&-wt
+			padding: 0 1em 1em
+
+			.ap
+				&-tt-sect
+					color: $orange
+					margin-bottom: .6em
+
+				&-txt
+					color: $base
+					margin-bottom: 1em
+
+	&-areas
+		&-list
+			position: relative
+
+		&-item
+			margin-bottom: 1em
+			position: relative
+
+		&-link
+			font-family: $subFont
+			color: $base
+
+			&:before
+				position: absolute;
+				right: 0;
+				font-size: 0.8em;
+				top: 50%;
+				margin-top: -0.5em;
+
+			i
+				color: $orange
+				font-size: 1.4em;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: .2em;
+				width: 1em;
+
+
+	&-why
+		background-color: #1d1d1f
+		padding: 2em 0 0
+
+		&-area
+			padding: 0 1em 1em
+
+		.ap-tt-sect--small-bold
+			width: 7em;
+			font-size: 1.6em;
+			line-height: 1em;
+
+		&-msg
+			padding: 1.4em 1.2em 1em 1em
+
+			.ap-txt
+				position: relative
+
+				&:before, &:after
+					color: rgba(255, 255, 255, .4)
+					font-size: 1.8em
+					position: absolute
+					font-family: 'Georgia', serif
+
+				&:before
+					content: '"'
+					left: -0.6em
+
+				&:after
+					content: '"'
+
+				&--cap
+					color: $orange
+					font-family: $prinFont
+					font-size: 4em;
+					float: left;
+					margin-right: 0.2em;
+					line-height: 0.6em;
+
+		&-block
+			background-color: $concretedk
+			text-align: center;
+			padding: 1em;
+
+		// People widget
+		&-item
+			display inline-block
+			font-size: .88em
+
+		&-img
+			background: url('../img/img-carlos.jpg') no-repeat center / cover
+			width: 4em;
+			display: inline-block;
+			height: 4em;
+			border: 2px solid $orange;
+			border-radius: 8em;
+			vertical-align: middle
+
+		&-inf
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 1em;
+			text-align: left;
+
+			.ap-txt
+				&--charge
+					color: $orange
+
+				&--name
+					color: $lightGr
+					font-size: 1.2em

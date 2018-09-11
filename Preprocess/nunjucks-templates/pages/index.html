@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% set title = '' %}
+{% set page = 'home' %}
+
+{% block content %}
+		<section class="ap-onepage" id="ap-onepage">
+			<article class="ap-op-sect ap-op-sect--top" id="ap-op-home">
+				{% include "partials/onepage/sect-top.html" %}
+			</article>
+			<article class="ap-op-sect ap-op-sect--areas" id="ap-op-areas">
+				{% include "partials/onepage/sect-areas.html" %}
+			</article>
+			<article class="ap-op-sect ap-op-sect--who">
+				{% include "partials/onepage/sect-who.html" %}
+			</article>
+			<article class="ap-op-sect ap-op-sect--lawyers">
+				{% include "partials/onepage/sect-lawyers.html" %}
+			</article>
+			<article class="ap-op-sect ap-op-sect--contact">
+				{% include "partials/onepage/sect-contact.html" %}
+			</article>
+		</section>
+{% endblock content %}
+
+{% block js %}
+{% endblock %}
+

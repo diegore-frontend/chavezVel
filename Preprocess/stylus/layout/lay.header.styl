@@ -1,0 +1,273 @@
+//////////////////////////////////////////
+.ap
+	&-header
+		position: fixed
+		width: 100%
+		z-index: 20
+		padding: 1.6em 1em
+
+		+below(414px)
+			padding: 1.5em 1.4em .4em 1.4em
+
+		.ap-panel
+			border-bottom: 1px solid rgba(255, 255, 255, .75)
+			padding: 0.2em 0
+
+		&--is-open
+			.ap-panel
+				position: relative
+				z-index: 12
+
+		&-tt
+			.ap
+				&-social
+					float: right;
+					padding-top: 0.6em;
+
+					&-btn
+						color: #FFF
+						font-size: 2em
+
+						&:nth-child(2)
+							margin-left: .4em
+
+				&-tt-sect--small-bold
+					float: left
+
+		&-orn
+			background-color: #1a1a1c;
+			width: 50%;
+			height: 80%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -6.8em;
+			z-index: -1;
+
+	&-tt
+		&-brand
+			width: 8em;
+			float: left;
+			font-size: 1.6em;
+			height: 1.5em;
+			position: relative
+
+			&:before
+				content: '';
+				position: absolute;
+				width: 100%;
+				background-color: #fff;
+				height: 0.1em;
+				bottom: -0.2em
+
+			img
+				width: 100%
+
+			&-link
+				display block
+				height: 2.2em
+
+		&-tt
+			font-size: 0
+			height: 0
+
+	&-header
+		&-navigation
+			position: fixed;
+			background: rgba(0, 0, 0, .75)
+			width: 100%;
+			left: 0;
+			top: 0
+			height: 100%
+			z-index: 10;
+			overflow hidden
+			padding: 5.5em 1em 1em
+			left: -100%
+			opacity: 0
+			transition: .30s all
+
+			&--is-open
+				opacity: 1
+				left: 0
+
+				.ap-nav-item
+					margin-bottom: 2em
+
+					+below(1024px)
+						animation: 1s fadeInLeft both
+
+						&:nth-child(2)
+							animation-delay: .2s
+
+						&:nth-child(3)
+							animation-delay: 0.4s
+
+						&:nth-child(4)
+							animation-delay: 0.6s
+
+						&:nth-child(5)
+							animation-delay: 0.8s
+
+						&:nth-child(6)
+							animation-delay: 1s
+
+						&:nth-child(7)
+							animation-delay: 1.2s
+
+						&:nth-child(8)
+							animation-delay: 1.4s
+
+					.ap-nav-nav
+						padding-top: 1em
+						padding-left: 3em
+						font-size: .8em
+
+						.ap-nav-item
+							border-left: 1px solid rgba(255, 255, 255, .4)
+							padding: 0.6em 1em;
+							margin-bottom: 0;
+
+				.ap-header-orn
+					animation: 1s fadeInRight .6s both cubic-bezier(0,0,.58,1)
+
+			&--is-leaving
+				.ap-nav-item
+					animation: 1s fadeOutLeft 1.6s both cubic-bezier(0,0,.58,1)
+
+					&:nth-child(2)
+						animation-delay: 1.4s
+
+					&:nth-child(3)
+						animation-delay: 1.2s
+
+					&:nth-child(4)
+						animation-delay: 1s
+
+					&:nth-child(5)
+						animation-delay: 0.8s
+
+					&:nth-child(6)
+						animation-delay: 0.6s
+
+					&:nth-child(7)
+						animation-delay: 0.4s
+
+					&:nth-child(8)
+						animation-delay: .2s
+
+				.ap-header-orn
+					animation: 1s fadeOutLeft .6s both cubic-bezier(0,0,.58,1)
+
+
+		.ap-btn
+			&-menu
+				width: 4.2em;
+				height: 3.8em;
+				position: relative;
+				transform: rotate(0deg);
+				transition: .5s ease-in-out;
+				cursor: pointer;
+				font-size: 0.55em;
+				display: inline-block;
+				vertical-align: middle
+
+				span
+					display: block;
+					position: absolute;
+					height: .6em
+					width: 100%;
+					background: #FFF
+					border-radius: 1.8em
+					opacity: 1;
+					left: 0;
+					transform: rotate(0deg);
+					transition: .18s ease-in-out;
+
+					&:nth-child(1)
+						top: 0px;
+
+					&:nth-child(2),&:nth-child(3)
+						top: 1.51em;
+						width: 3em;
+						left: auto;
+						right: 0;
+
+					&:nth-child(4)
+						top: 3em;
+						width: 2em;
+						right: 0;
+						left: auto;
+
+				&--is-open
+					font-size: 0.58em
+
+					span
+						background-color: $orange
+
+						&:nth-child(1)
+							top: 1.51em
+							width: 0%;
+							left: 50%;
+
+						&:nth-child(2)
+							transform: rotate(45deg);
+
+						&:nth-child(3)
+							transform: rotate(-45deg);
+
+						&:nth-child(4)
+							top: 1.51em
+							width: 0%;
+							left: 50%;
+
+	&-navigation
+		float: right
+		font-size: .8em
+
+	&-nav
+		padding-left: 2em
+		padding-top: 1em
+
+		&-link
+			font-family: $subFont
+			color: #FFF
+			position: relative
+			display block
+			font-size: 1.6em
+
+			&:before
+				font-family: 'chvz-font' !important;
+				content: "\e903";
+				position: absolute;
+				right: 0;
+				font-size: 0.8em;
+				top: 50%;
+
+		&-scroll
+			position: relative;
+			padding-right: 1.4em;
+			height: calc(100% - 3.8em)
+			overflow: hidden
+
+	/// Search Bar
+	&-search-bar
+		display: inline-block;
+		vertical-align: middle;
+		width: 1em;
+		height: 1em;
+		font-size: 2.2em;
+		padding-right: 1.4em;
+		border-right: 1px solid rgba(255,255,255,.8);
+		margin-right: 0.4em;
+
+		.ap-btn-search
+			color: #FFF
+			font-size: 1em
+
+		.ap-inpt-txt
+			width: 0;
+			position: absolute;
+			right: 0;
+			border: 0;
+			padding: 0.5em;
+			display none
