@@ -60,32 +60,32 @@
 				<div class="ap-nav-scroll ap-scroll">
 					<ul class="ap-nav ap-nav--left cf" id="ap-nav">
 						<li class="ap-nav-item ap-nav-item--active">
-							<a href="" class="ap-nav-link">Inicio</a>
+							<a href="#ap-op-home" class="ap-nav-link">Inicio</a>
 						</li>
 						<li class="ap-nav-item">
-							<a href="" class="ap-nav-link">Áreas de Práctica</a>
+							<a href="#ap-op-areas" class="ap-nav-link">Áreas de Práctica</a>
 						</li>
 						<li class="ap-nav-item">
-							<a href="" class="ap-nav-link">¿Quiénes somos?</a>
+							<a href="#ap-op-who" class="ap-nav-link">¿Quiénes somos?</a>
 						</li>
 						<li class="ap-nav-item">
-							<a href="" class="ap-nav-link ap-nav-link--no-link">Nuestros Abogados</a>
+							<a href="#ap-op-lawyers" class="ap-nav-link ap-nav-link--no-link">Nuestros Abogados</a>
 						</li>
 						<li class="ap-nav-item">
-							<a href="" class="ap-nav-link ap-nav-link--no-link">Otros</a>
+							<a href="#" class="ap-nav-link ap-nav-link--no-link">Otros</a>
 
 							<ul class="ap-nav-nav">
 								<li class="ap-nav-item">
-									<a href="" class="ap-nav-link ap-nav-link--no-link">Contacto</a>
+									<a href="#ap-op-lawyers" class="ap-nav-link">Contacto</a>
 								</li>
 								<li class="ap-nav-item">
-									<a href="" class="ap-nav-link ap-nav-link--no-link">Blog</a>
+									<a href="" class="ap-nav-link ap-nav-link--ext-link">Blog</a>
 								</li>
 								<li class="ap-nav-item">
-									<a href="" class="ap-nav-link ap-nav-link--no-link">Noticias</a>
+									<a href="" class="ap-nav-link ap-nav-link--ext-link">Noticias</a>
 								</li>
 								<li class="ap-nav-item">
-									<a href="" class="ap-nav-link ap-nav-link--no-link">Docencia</a>
+									<a href="" class="ap-nav-link ap-nav-link--ext-link">Docencia</a>
 								</li>
 							</ul>
 						</li>
@@ -265,7 +265,7 @@
 		</article>
 
 			</article>
-			<article class="ap-op-sect ap-op-sect--who">
+			<article class="ap-op-sect ap-op-sect--who" id="ap-op-who">
 				
 		<!-- Areas -->
 		<div class="ap-who">
@@ -279,11 +279,13 @@
 
 					<div class="cf ap-who-data">
 						<div class="ap-who-data--wins col6">
-							<span class="ap-who-data--number">79%</span>
+							<span class="ap-who-data-num">
+								<span class="ap-who-data--number">79</span>
+							</span>
 							<p class="ap-who-data-tt">Casos Ganados</p>
 						</div>
 						<div class="ap-who-data--pitch col6">
-							<span class="ap-who-data--number">87%</span>
+							<span class="ap-who-data--number">87</span>
 							<p class="ap-who-data-tt">Casos Levantados</p>
 						</div>
 					</div>
@@ -322,7 +324,7 @@
 		</div>
 
 			</article>
-			<article class="ap-op-sect ap-op-sect--lawyers">
+			<article class="ap-op-sect ap-op-sect--lawyers" id="ap-op-lawyers">
 				
 		<!-- Slider Top -->
 		<article class="ap-law">
@@ -378,7 +380,7 @@
 		</article>
 
 			</article>
-			<article class="ap-op-sect ap-op-sect--contact">
+			<article class="ap-op-sect ap-op-sect--contact" id="ap-op-contact">
 				
 		<!-- Areas -->
 		<div class="ap-area-ct">
@@ -388,14 +390,14 @@
 				</h2>
 			</header>
 			<div class="ap-ct-info cf">
-				<div class="col6 ap ct-info-data">
-					<h3 class="ap-tt-sect icon-map">
+				<div class="col6 ap-ct-info-data">
+					<h3 class="ap-tt-sectt icon-map">
 						NUESTRAS OFICINAS
 					</h3>
 					<p class="ap-ct-item">Paseo Tulum, Manzana 19 Lote 8,Edificio Bugambilias, Oficina 25, Playacar Fase II, Código Postal 77710, Playa del Carmen, Quintana Roo.</p>
 				</div>
-				<div class="col6 ap ct-info-data">
-					<h3 class="ap-tt-sect icon-search">
+				<div class="col6 ap-ct-info-data">
+					<h3 class="ap-tt-sectt icon-search">
 						MANTENGAMOS CONTACTO
 					</h3>
 					<p class="ap-txt">
@@ -417,9 +419,25 @@
 				</div>
 			</div>
 		</div>
-		<div class="ap-ct-map"></div>
+		<div class="ap-ct-map">
+			<div id="map-canvas"></div>
+		</div>
 
 			</article>
+			<!-- // Footer -->
+			
+		<footer class="ap-footer">
+			<div class="ap-panel cf">
+				<a href="/" class="ap-tt-brand-link f-left">
+					<img src="Content/img/img-logo-top.png" alt="Chávez Velásco | Abogados">
+				</a>
+				<nav class="ap-nav f-right">
+					<a href="https://twitter.com/ChaVAbogados" target="_blank" class="ap-social-btn icon-twitter"></a>
+					<a href="https://www.facebook.com/ChavezVelascoAbogados/" target="_blank" class="ap-social-btn icon-facebook"></a>
+				</nav>
+			</div>
+		</footer>
+
 		</section>
 
 
@@ -448,6 +466,8 @@
 		<script src="Scripts/actions/jquery.actions.min.js"></script>
 
 		<!-- Block scripts -->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="https://developers.google.com/maps/documentation/javascript/examples/map-simple"></script>
 
 	</main>
 </body>

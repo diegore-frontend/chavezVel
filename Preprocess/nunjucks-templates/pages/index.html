@@ -10,18 +10,22 @@
 			<article class="ap-op-sect ap-op-sect--areas" id="ap-op-areas">
 				{% include "partials/onepage/sect-areas.html" %}
 			</article>
-			<article class="ap-op-sect ap-op-sect--who">
+			<article class="ap-op-sect ap-op-sect--who" id="ap-op-who">
 				{% include "partials/onepage/sect-who.html" %}
 			</article>
-			<article class="ap-op-sect ap-op-sect--lawyers">
+			<article class="ap-op-sect ap-op-sect--lawyers" id="ap-op-lawyers">
 				{% include "partials/onepage/sect-lawyers.html" %}
 			</article>
-			<article class="ap-op-sect ap-op-sect--contact">
+			<article class="ap-op-sect ap-op-sect--contact" id="ap-op-contact">
 				{% include "partials/onepage/sect-contact.html" %}
 			</article>
+			<!-- // Footer -->
+			{% include "partials/footer.html" %}
 		</section>
 {% endblock content %}
 
 {% block js %}
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="https://developers.google.com/maps/documentation/javascript/examples/map-simple"></script>
 {% endblock %}
 
