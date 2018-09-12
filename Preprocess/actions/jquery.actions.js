@@ -43,7 +43,6 @@ $(document).ready(function(){
 	 menu();
 	 txtellipsis();
 	 sliders();
-	 maps();
 });
 
 function loader() {
@@ -115,27 +114,12 @@ function sliders() {
 	});
 }
 
-function maps() {
-	var map;
-
-	function initialize() {
-	  var myLatlng = new google.maps.LatLng(20.6158426,-87.0944725);
-	  var mapOptions = {
-	    zoom: 13,
-	    disableDefaultUI: true,
-	    center: myLatlng
-	  };
-	  map = new google.maps.Map(document.getElementById('map-canvas'),
-	      mapOptions);
-
-	  var marker = new google.maps.Marker({
-	    position: myLatlng,
-	    map: map,
-	    title: 'Chávez Velásco | Abogados'
-	  });
-
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
+function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: {lat: 20.6158426, lng: -87.0944725},
+		zoom: 13,
+		disableDefaultUI: true
+	});
 }
 
 function countNumbers() {
