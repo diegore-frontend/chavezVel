@@ -4,8 +4,16 @@
 			&--who
 				padding-top: 0
 
+				+above(1000px)
+					background: #000
+					padding: 10em 0 4em
+
 	&-who
 		position: relative
+
+		+above(1000px)
+			max-width: 80em;
+			margin: auto;
 
 		.ap-tt-sect
 			position: absolute;
@@ -14,15 +22,32 @@
 			top: 2.2em;
 			z-index: 2;
 
+			+above(1000px)
+				top: 0.2em
+				margin-left: 0.6em
+
 			&:before
 				background-color: $orange
 
 		&-img
 			&-bg
-				background: url('../img/img-somos.jpg') center top no-repeat / cover
 				position: relative;
 				height: 32em;
+
+				+above(1000px)
+					float: right;
+					width: calc(100% - 54em);
+					transform: translateX(-1em);
+					padding: 2.6em 0 0
+
+			&-area
+				height: 100%
+				background: url('../img/img-somos.jpg') center top no-repeat / cover
 				padding-top: 16em;
+
+				+above(1000px)
+					padding-top: 14em
+					position: relative
 
 		// Info
 		&-info
@@ -66,6 +91,12 @@
 
 		&-block
 			padding: 1em
+
+			+above(1000px)
+				padding: 6em 4em 1em 2em;
+				float: left;
+				width: 54em;
+				background: #1d1d1f;
 
 			.ap-tt-sect--orange
 				color: $orange

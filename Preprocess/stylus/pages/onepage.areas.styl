@@ -1,13 +1,30 @@
+$pt = 6em
+
 .ap
 	&-op
 		&-sect
 			&--areas
 				background: #FFF;
-				padding: 6em 0 0
+				padding-top: $pt
+
+				+above(1000px)
+					background: $lightGr
 
 	&-area
+		&-panel
+			+above(1000px)
+				max-width: 80em;
+				margin: auto;
+				padding-bottom: $pt
+
 		&-wt
 			padding: 0 1em 1em
+
+			+above(1000px)
+				background-color: #FFF
+				float left
+				width: 60em
+				padding: 2em 3.6em 2em 2em
 
 			.ap
 				&-tt-sect
@@ -18,9 +35,29 @@
 					color: $base
 					margin-bottom: 1em
 
+					+above(1000px)
+						margin-bottom: 2.6em
+
+		&-dsk
+			+above(1000px)
+				width: calc(100% - 60em);
+				height: 14em;
+				float: left;
+				position: relative;
+				transform: translate(-2em, 0);
+				padding: 2em 0
+
+			&-img
+				+above(1000px)
+					background: url('../img/img-areas.jpg') no-repeat center top / cover
+					height: 100%
+
 	&-areas
 		&-list
 			position: relative
+
+			+above(1000px)
+				font-size: 1.4em
 
 		&-item
 			margin-bottom: 1em
@@ -45,13 +82,25 @@
 				margin-right: .2em;
 				width: 1em;
 
+				+above(1000px)
+					width: 1.8em
+
 
 	&-why
 		background-color: #1d1d1f
 		padding: 2em 0 0
 
+		+above(1000px)
+			padding: 4em 0 0
+			position: relative
+
 		&-area
 			padding: 0 1em 1em
+
+			+above(1000px)
+				max-width: 80em;
+				margin: auto;
+				padding: 0 1em 2em
 
 		.ap-tt-sect--small-bold
 			width: 7em;
@@ -60,6 +109,10 @@
 
 		&-msg
 			padding: 1.4em 1.2em 1em 1em
+
+			+above(1000px)
+				max-width: 44em;
+				font-size: 1.2em;
 
 			.ap-txt
 				position: relative
@@ -90,10 +143,18 @@
 			text-align: center;
 			padding: 1em;
 
+			+above(1000px)
+				.ap-area-panel
+					padding: 0
+					text-align right
+
 		// People widget
 		&-item
 			display inline-block
 			font-size: .88em
+
+			+above(1000px)
+				font-size: 1em
 
 		&-img
 			background: url('../img/img-carlos.jpg') no-repeat center / cover
@@ -103,6 +164,17 @@
 			border: 2px solid $orange;
 			border-radius: 8em;
 			vertical-align: middle
+
+			+above(1000px)
+				background: url('../img/img-carlos-areas.png') no-repeat center top/cover
+				position: absolute;
+				bottom: 50%;
+				border: 0;
+				border-radius: 0;
+				font-size: 3.6em;
+				margin-bottom: -1.4em;
+				right: 50%;
+				margin-right: -8em;
 
 		&-inf
 			display: inline-block;

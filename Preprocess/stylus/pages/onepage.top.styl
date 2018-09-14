@@ -15,12 +15,22 @@
 					z-index: 12;
 					pointer-events: none;
 
+					+above(1000px)
+						background: linear-gradient(top, rgba(#232322, 1), rgba(#232322, 0));
+						top: 2em
+
+				+above(1000px)
+					padding: 2em 0 2em 3em
+
 	&-top
 		&-slider
 			background-color: #3b3b39
 			height: calc(100% - 10em)
 			overflow hidden
 			position: relative
+
+			+above(1000px)
+				height: 100%
 
 			&-pattern
 				background: url('../img/pattern.png')
@@ -61,6 +71,11 @@
 			text-align: center;
 			z-index: 2
 
+			+above(1000px)
+				text-align: left;
+				margin-bottom: -15em;
+				padding-left: 2em;
+
 			.ap-tt-sect--orange
 				color: $orange
 				font-size: 1.8em;
@@ -86,6 +101,10 @@
 			margin-top: -4em;
 			z-index: 4
 
+			+above(1000px)
+				margin-top: -5.4em;
+				font-size: 2em;
+
 	&-fx
 		&-lg
 			width: 16em
@@ -97,6 +116,16 @@
 	// Feed
 	&-nfd
 		background-color: $concretedk
+
+		+above(1000px)
+			background-color: rgba($concretedk, .8)
+			position: absolute;
+			width: 25em;
+			right: 0;
+			bottom: 4em;
+			z-index: 2;
+			height: 12em;
+			padding: 1em 0;
 
 		&-header
 			padding: 1em 1em 0

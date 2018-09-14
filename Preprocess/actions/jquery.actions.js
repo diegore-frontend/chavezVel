@@ -43,6 +43,12 @@ $(document).ready(function(){
 	 menu();
 	 txtellipsis();
 	 sliders();
+	 heightAr();
+});
+
+
+$(window).smartresize(function(){
+	heightAr();
 });
 
 function loader() {
@@ -133,4 +139,17 @@ function countNumbers() {
 			}
 		});
 	});
+}
+
+
+function heightAr() {
+	var $hbas = $('.ap-area-wt').innerHeight() + 'px',
+			$whos = $('.ap-who-img-bg').height() + 'px',
+			$wwdt = $(window).width();
+
+  if ($wwdt >= 760) {
+  	$(".ap-area-dsk").css("height", $hbas);
+  	$(".ap-who-block").css("height", $hbas);
+  }
+
 }
