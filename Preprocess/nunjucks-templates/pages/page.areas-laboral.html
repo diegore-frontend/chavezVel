@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% set title = '' %}
+{% set page = 'home' %}
+
+{% block content %}
+		<section class="ap-area-int" id="ap-civil">
+			<header class="ap-int-top">
+				<div class="ap-panel">
+					<a href="/" class="ap-btn-return icon-arrow-right">VOLVER</a>
+					<h2 class="ap-tt-sect">
+						DERECHO LABORAL
+					</h2>
+				</div>
+			</header>
+
+			<article class="ap-ar-info cf">
+				<div class="ap-ar-data">
+					<div class="ap-ar-art">
+						<h3 class="ap-tt-sect--orange">Actos de comercio y títulos de crédito.</h3>
+						<p class="ap-txt">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti id excepturi consequatur sed nobis, facere veritatis tempore qui ipsum enim, dignissimos iste. Natus esse omnis saepe fugit ducimus cumque voluptate!
+						</p>
+					</div>
+					<div class="ap-ar-art">
+						<h3 class="ap-tt-sect--orange">Servicios:</h3>
+						<ul class="ap-ar-list">
+							<li class="ap-ar-list-item">
+								Asesoramiento a empresas y particulares en materia mercantil.
+							</li>
+							<li class="ap-ar-list-item">
+								Solución de controversias jurídicas derivadas de los actos de comercio.
+							</li>
+							<li class="ap-ar-list-item">
+								Cobranza extrajudicial de títulos de crédito.
+							</li>
+							<li class="ap-ar-list-item">
+								Representación en los juicios mercantiles.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<aside class="ap-ar-aside">
+					<div class="ap-ar-art">
+						<h3 class="ap-tt-sect--orange">Abogado especialista:</h3>
+						<div class="ap-lawyer cf">
+							<figure class="ap-law-img">
+								<img src="Content/img/img-carlos.jpg" alt="Carlos Chávez">
+								<figcaption class="ap-law-img-info">
+									<span class="ap-law-name">Carlos Chávez</span>
+									<span class="ap-law-charge">Abogado</span>
+								</figcaption>
+							</figure>
+
+							<div class="ap-law-info">
+								<h4 class="ap-tt-sec">ÁREAS DE EXPERTÍZ</h4>
+								<ul class="ap-law-list">
+									<li class="ap-law-item">Derecho Mercantil</li>
+									<li class="ap-law-item">Derecho Laboral</li>
+									<li class="ap-law-item">Derecho indigena</li>
+								</ul>
+								<nav class="ap-nav cf">
+									<a href="#" class="ap-btn ap-btn--orange">Leer más</a>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</article>
+			<!-- // Footer -->
+			{% include "partials/footer.html" %}
+		</section>
+{% endblock content %}
+
+{% block js %}
+{% endblock %}

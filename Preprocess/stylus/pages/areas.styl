@@ -1,0 +1,119 @@
+$pt = 6em
+
+.ap
+	&-area-int
+		background-color: #FFF
+
+	&-int
+		&-top
+			animation: 1s topHd 4s both cubic-bezier(0,0,.58,1)
+			background: url('../img/slide-top/slide-01.jpg') center top / cover
+			height: 100%;
+			min-height: 32em;
+			text-align: center;
+			display: inline-table;
+			width: 100%;
+			position: relative
+
+			&:before
+				background: url('../img/pattern.png')
+				content: ''
+				position: absolute
+				height: 100%
+				width: 100%
+				top: 0
+				left: 0
+
+			.ap-panel
+				display: table-cell
+				vertical-align: bottom
+
+
+				&-area
+					max-width: 90em
+					margin: auto
+					padding: 1em
+					position: relative
+
+			.ap-tt-sect
+				color: #FFF
+
+				&:before
+					background-color: $orange
+
+			.ap-btn-return
+				color: $orange
+				position: absolute;
+				top: 50%;
+				margin-top: -22em;
+				font-size: 1.2em;
+				left: 1em;
+
+				+above(1000px)
+					margin-top: -16em
+
+				&:before
+					color: #fff;
+					position: absolute;
+					bottom: -0.2em;
+					left: -0.5em;
+
+	&-ar
+		&-info
+			animation: 1s fadeIn 5s both cubic-bezier(0,0,.58,1)
+			background-color: #FFF;
+			padding: 1em;
+			max-width: 90em
+			margin: auto
+
+		&-data
+			+above(600px)
+				float: left;
+				width: calc(100% - 26em);
+				padding-right: 1em;
+
+			+above(1000px)
+				width: calc(100% - 28em);
+
+		&-aside
+			+above(600px)
+				float: left;
+				width: 26em;
+				padding-left: 1em;
+				border-left: 1px solid rgba(0,0,0,.2);
+				min-height: 30em;
+
+			+above(1000px)
+				width: 28em
+
+		&-art
+			.ap-tt-sect--orange
+				color: $orange
+				font-weight: 300
+				margin: 0.6em 0
+
+			.ap-txt
+				color: $base
+
+		&-list
+			padding-left: 1.4em;
+			position: relative;
+
+			&-item
+				font-family: $subFont
+				position: relative
+				margin-bottom: .6em
+
+				&:last-child
+					margin: 0
+
+				&:before
+					content: '•'
+					color: $orange
+					position: absolute;
+					left: -0.8em;
+					font-size: 1.4em;
+					top: -0.3em;
+
+
+
