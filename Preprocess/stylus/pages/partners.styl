@@ -2,20 +2,23 @@
 	&-int-partner-data
 		text-align: left
 
+		+below(380px)
+			font-size: 0.88em
+
 	&-partner
 		.ap-tt-sect
-			display: inline-block;
-			vertical-align: top;
-			max-width: 4em;
-			width: 100%;
-			text-align: left;
-			line-height: .8em;
-			font-size: 4.2em;
-			margin-left: 0.2em;
+			display: inline-block
+			vertical-align: top
+			max-width: 4em
+			width: 100%
+			text-align: left
+			line-height: .8em
+			font-size: 4.2em
+			margin-left: 0.2em
 
 			&--small
-				font-size: 0.4em;
-				display: block;
+				font-size: 0.4em
+				display: block
 
 			&:before
 				bottom: -.01em
@@ -46,4 +49,53 @@
 				vertical-align -.2em
 				font-size: 1.6em
 				margin-right: .4em
+
+	// Acordion
+	&-ar
+		&-toggl
+			color: $orange
+			position: absolute;
+			font-style: normal;
+			font-size: 1.2em;
+			right: 1em;
+			top: 50%;
+			margin-top: -0.2em
+
+
+			&:before
+				font-family: 'chvz-font' !important;
+				speak: none;
+
+			&-up
+				&:before
+					content: "\e902";
+
+			&-down
+				&:before
+					content: "\e900";
+
+		&-info
+			&-head
+				border-top: 1px solid rgba(0, 0, 0, .2)
+				position: relative
+
+				+above(480px)
+					border: 0
+
+			&-box
+				display: none
+				height: 0
+				overflow: hidden
+
+				+below(480px)
+					padding-bottom: 2.5em;
+
+				+above(480px)
+					display: block
+					height: inherit
+
+				&--default
+					display: block
+					height: inherit
+
 

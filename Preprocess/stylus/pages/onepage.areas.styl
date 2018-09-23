@@ -49,8 +49,10 @@ $pt = 6em
 
 			&-img
 				+above(1000px)
-					background: url('../img/img-areas.jpg') no-repeat center top / cover
-					height: 100%
+					background: url('../img/img-areas.jpg') no-repeat right top
+					height: 100%;
+					background-attachment: fixed;
+					background-size: 32em;
 
 	&-areas
 		&-list
@@ -58,6 +60,12 @@ $pt = 6em
 
 			+above(1000px)
 				font-size: 1.4em
+				width: 48%;
+				margin-left: 4%;
+
+				&:first-child
+					border-right: 1px solid rgba(0, 0, 0, .2)
+					padding-right: 5%;
 
 		&-item
 			margin-bottom: 1em
@@ -73,6 +81,7 @@ $pt = 6em
 				font-size: 0.8em;
 				top: 50%;
 				margin-top: -0.5em;
+				transition: .10s linear
 
 			i
 				color: $orange
@@ -84,6 +93,27 @@ $pt = 6em
 
 				+above(1000px)
 					width: 1.8em
+
+			&:after
+				content: ''
+				width: 0
+				height: .1em
+				background-color: rgba($orange, .4)
+				transition: .10s linear
+				position: absolute
+				bottom: -0.4em;
+				left: 0;
+
+			+above(1000px)
+				&:hover
+					color: $orange
+
+					&:after
+						width: 100%
+
+					&:before
+						right: -.2em
+
 
 
 	&-why

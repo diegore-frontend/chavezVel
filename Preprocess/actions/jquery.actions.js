@@ -19,7 +19,8 @@ var waypoints = $('#ap-op-who').waypoint(function(direction) {
 	offset: '25%'
 });
 var waypoints = $('#ap-op-lawyers').waypoint(function(direction) {
-		$elhead.toggleClass('ap-header--ov-white')
+		$elhead.toggleClass('ap-header--ov-white');
+		$('.ap-op-sect--lawyers').toggleClass('ap-op-sect--lawyers-active')
 	}, {
 	offset: '25%'
 });
@@ -34,16 +35,17 @@ $(function(){
 		changeHash: false,
 		scrollSpeed: 750,
 		scrollThreshold: 0.5,
-		filter: '',
+		filter: ':not(.ap-nav-link--ext-link)',
 		easing: 'swing'
 	});
 });
 
 $(document).ready(function(){
-	 menu();
-	 txtellipsis();
-	 sliders();
-	 heightAr();
+	getlatestNew();
+	menu();
+	sliders();
+	heightAr();
+	acordion();
 });
 
 
@@ -147,9 +149,87 @@ function heightAr() {
 			$whos = $('.ap-who-img-bg').height() + 'px',
 			$wwdt = $(window).width();
 
-  if ($wwdt >= 760) {
+  if ($wwdt >= 1000) {
   	$(".ap-area-dsk").css("height", $hbas);
   	$(".ap-who-block").css("height", $hbas);
   }
 
+  clearHeight();
+
+  function clearHeight() {
+  	if (($wwdt <= 1000)) {
+  		$(".ap-area-dsk").removeAttr('style');
+  		$(".ap-who-block").removeAttr('style');
+  	}
+  }
+
+}
+
+function acordion() {
+	var $activeClass = 'ap-ar-info-head--active',
+			$infoBox = '.ap-ar-info-box';
+
+	if (detectmob()) {
+
+		$('.ap-ar-info').find('.ap-ar-info-head').click(function(){
+			$(this).next().css('height', 'auto').slideToggle('fast');
+
+			if ($(this).find('.ap-ar-toggl').hasClass('ap-ar-toggl-up')) {
+				$(this).find('.ap-ar-toggl').removeClass('ap-ar-toggl-up').addClass('ap-ar-toggl-down');
+			} else {
+				$('.ap-tabs-box').find('.ap-ar-toggl').removeClass('ap-ar-toggl-up').addClass('ap-ar-toggl-down');
+				$(this).find('.ap-ar-toggl').removeClass('ap-ar-toggl-down').addClass('ap-ar-toggl-up');
+			}
+
+			//Hide the other panels
+     	$('.ap-ar-info-box').not($(this).next()).slideUp('fast');
+		});
+	}
+}
+
+function getlatestNew() {
+	var data = [ {
+	    url: 'https://www.chavezvelascoabogados.com/blog', // url string rquired
+	    selector: 'div#comp-il2tzr1b_MediaLeftPage_Array__0_0_thisinlineContent', // selector string rquired
+	    loop: false, // each boolean rquired
+	    result: [
+	        {
+	            name: 'title', // key string rquired
+	            find: 'div#comp-il2tzr1b_MediaLeftPage_PhotoPost__0_0_0_0_def_7 h2 em', // selector child string rquired
+	            grab: {
+	                by: 'text', // attribut string rquired
+	                value: '' // attribut value string optional
+	            }
+	        },
+	        {
+	            name: 'text', // key string rquired
+	            find: 'div#comp-il2tzr1b_MediaLeftPage_PhotoPost__0_0_0_0_def_25 p', // selector child string rquired
+	            grab: {
+	                by: 'text', // attribut string rquired
+	                value: '' // attribut value string optional
+	            }
+	        },
+	        {
+	            name: 'link', // key string rquired
+	            find: 'div#comp-il2tzr1b_MediaLeftPage_PhotoPost__0_0_0_0_def_27 a', // selector child string rquired
+	            grab: {
+	               by: 'attr',
+	               value: 'href'
+	            }
+	        }
+	    ]
+	}];
+
+	ygrab(data, function(result) {
+		var $opDat = JSON.stringify(result),
+				$ntitl = result[0].title,
+				$nText = result[0].text,
+				$nlink = result[0].link;
+
+		$('.ap-nws-slider .ap-tt-sect').html($ntitl);
+		$('.ap-nws-slider .ap-news-txt').html($nText);
+		$('.ap-nws-slider .ap-news-link').attr('href', $nlink)
+
+		txtellipsis();
+	});
 }

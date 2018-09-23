@@ -10,6 +10,14 @@
 						margin: auto;
 						max-width: 80em;
 
+
+				&-active
+					.ap-law
+						&-img
+							img
+								transform: none
+								opacity: 1
+
 	&-law
 		&-hd
 			padding: 6em 0 2em
@@ -22,8 +30,13 @@
 			display: inline-block
 			vertical-align: top
 			width: 10em
+			overflow hidden
 			position: relative
 
+			img
+				transition: .30s all cubic-bezier(.25,.1,.25,1)
+				transform: translate(-10em, 0em); */
+				opacity: 0;
 
 			&:before
 				background: url('../img/pattern.png')
@@ -67,6 +80,16 @@
 				margin-bottom: .6em
 				text-transform uppercase
 
+			.ap-btn
+				+above(1000px)
+					border: 2px solid transparent
+					transition: .30s all
+
+					&:hover
+						border-color: $orange
+						background-color: #FFF
+						color: $orange
+
 		&-item
 			font-family: $subFont
 			color: $base
@@ -89,3 +112,8 @@
 
 			+above(1000px)
 				padding: 4em 1em;
+
+		&:nth-child(2)
+			.ap-law-img
+				img
+					transition-delay: .3s
