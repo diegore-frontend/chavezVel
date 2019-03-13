@@ -5,6 +5,10 @@
 				background-color: $lightGr
 				position: relative
 
+				.ap-txt
+					color: $base
+					padding: 4em 0 2em;
+
 				.ap-panel
 					+above(1000px)
 						margin: auto;
@@ -113,7 +117,25 @@
 			+above(1000px)
 				padding: 4em 1em;
 
+			.col6
+				+below(420px)
+					float: none;
+					width: 100%;
+					margin-left: 0;
+
+				&:nth-child(2)
+					+below(420px)
+						margin-top: 1em
+
+			.ap-btn--orange
+				float: none;
+				margin: auto;
+				display: block;
+				width: 18em;
+				text-align: center;
+
 		&:nth-child(2)
 			.ap-law-img
 				img
 					transition-delay: .3s
+
